@@ -21,7 +21,7 @@ typedef struct _rplidar_measurement_node_t {
 extern "C"{
 LIBRPLIDARSHARED_EXPORT int lidarInit(const char* portname,unsigned int baudrate);
 LIBRPLIDARSHARED_EXPORT int lidarStart(void);
-LIBRPLIDARSHARED_EXPORT int lidarGetScanData(rplidar_measurement_node_t * nodes,size_t count, unsigned int timeout = 2000);
+LIBRPLIDARSHARED_EXPORT int lidarGetScanData(uint8_t* nodes,size_t* count, uint32_t timeout);
 LIBRPLIDARSHARED_EXPORT int lidarStop(void);
 }
 #endif // LIBRPLIDAR_GLOBAL_H
